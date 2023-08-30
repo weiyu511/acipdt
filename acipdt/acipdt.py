@@ -103,7 +103,7 @@ class FabLogin(object):
         # Try the request, if exception, exit program w/ error
         try:
             # Verify is disabled as there are issues if it is enabled
-            r = s.post('https://{}/api/mo/aaaLogin.json'.format(self.apic),
+            r = s.post('https://{}/api/aaaLogin.json'.format(self.apic),
                        data=json.dumps(payload), verify=False)
             # Capture HTTP status code from the request
             status = r.status_code
